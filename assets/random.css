@@ -1,0 +1,104 @@
+code{white-space: pre}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+.display .math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+
+/* .reveal pre {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+        margin-top: 20px;
+        margin-right: auto;
+        margin-bottom: 20px;
+        margin-left: auto; 
+    text-align: left;
+    font-size: 0.55em;
+    font-family: monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.reveal pre code {
+    display: block;
+    padding: 5px;
+    padding-left: 3rem;
+    overflow: auto;
+    max-height: 400px;
+    word-wrap: normal;
+} */
+
+.reveal pre {
+  overflow: auto;
+  word-wrap: normal;
+  margin: auto;
+  padding: .85em 1em;
+/*  background: #f7f7f7; */
+  border: none;
+  width: 100%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.reveal pre > code {
+  display: block;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  font-size: .85em;
+  white-space: pre;
+  /* background: 0 0; */
+}
+
+pre.numberSource code > span > a:first-child::before {
+    content: counter(source-line);
+    position: relative;
+    left: -0.25em;
+    text-align: right;
+    vertical-align: baseline;
+    border: none;
+    display: inline-block;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0 4px 0 0;
+        padding-top: 0px;
+        padding-right: 4px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    width: 5em;
+/*    color: #aaaaaa; */
+    text-decoration: underline;
+}
+
+/* pre.numberSource {
+    padding-left: 0px;
+}
+
+pre.numberSource code > span > a:first-child::before {
+  left: -.25em;
+  background-color: rgba;
+} */
+
+
+

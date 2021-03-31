@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Samuel Guay" />
+  <meta name="dcterms.date" content="2021-03-31" />
+  <title>Partager ses analyses sur le Web</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-4.1/dist/reset.css">
+  <link rel="stylesheet" href="index_files/reveal.js-4.1/dist/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="index_files/reveal.js-4.1/dist/theme/night.css" id="theme">
+
+<style type="text/css">
+.reveal section img {
+  background: rgba(255, 255, 255, 0.85);
+}
+</style>
+
+<!-- some tweaks to reveal css -->
+<style type="text/css">
+	.reveal h1 { font-size: 2.0em; }
+	.reveal h2 { font-size: 1.5em;  }
+	.reveal h3 { font-size: 1.25em;	}
+	.reveal h4 { font-size: 1em;	}
+	
+	.reveal .slides>section,
+	.reveal .slides>section>section {
+		padding: 0px 0px;
+	}
+	
+		
+
+
+	
+	.reveal .slide-menu-button {
+		left: 105px !important;
+	}
+</style>
+
+<style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="assets/custom.css"/>
+    <link rel="stylesheet" href="assets/dracula.css"/>
+
+    <script src="index_files/header-attrs-2.7/header-attrs.js"></script>
+    <link href="index_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+    <link href="index_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section>
+<section id="partager-ses-analyses-sur-le-web" class="title-slide slide level1" style="background-color: var(--background-color;); color: var(--blue-40); ">
+<h1 style="background-color: var(--background-color;); color: var(--blue-40); ">Partager ses analyses sur le Web</h1>
+<p><span class="white"><a href="https://samuelguay.ca">Samuel Guay</a></span></p>
+<img data-src="img/cover.png" class="stretch" />
+</section>
+<section id="open-science-umontréal" class="slide level2 left">
+<h2 class="left">Open Science UMontréal</h2>
+<p><small> Open Science UMontréal est une initiative étudiante qui a pour <a href="https://docs.osumontreal.ca/fr/#mission">mission</a> de promouvoir une science au service du bien commun par la <strong>sensibilisation</strong>, la mise à disposition de <strong>ressources</strong> et la <strong>mobilisation de la communauté</strong>.</p>
+<h3 id="pour-nous-joindre">Pour nous joindre</h3>
+<p>Toute personne intéressée, qu’elle soit affiliée ou non à l’UdeM, peut participer aux activités et joindre notre initiative.</p>
+<p>Pour toute question, pour joindre un membre de notre équipe ou pour vous impliquez au sein d’Open Science Umontréal -&gt; Contactez-nous via courriel <a href="mailto:info@osumontreal.ca" class="email">info@osumontreal.ca</a> et il nous fera plaisir de vous répondre :) </small></p>
+<img data-src="img/osum_white.png" class="stretch" style="background:none" alt="Logo d’OSUMontréal" />
+</section></section>
+<section>
+<section id="pertinence-de-partager" class="title-slide slide level1">
+<h1>Pertinence de partager?</h1>
+<ul>
+<li class="fragment">Pour <strong>soi-même</strong> (et ses collègues)</li>
+<li class="fragment">Faciliter ++ les collaborations</li>
+<li class="fragment">Pour les autres qui découvrent vos travaux</li>
+<li class="fragment">Force à faire/automatiser un contrôle de qualité</li>
+<li class="fragment">Pour une meilleure reproductibilité et science en général</li>
+</ul>
+</section>
+<section id="exemples-de-partages" class="slide level2">
+<h2>Exemples de partages</h2>
+<ol type="1">
+<li>Site</li>
+</ol>
+</section>
+<section id="avant-de-se-lancer" class="slide level2">
+<h2>Avant de se lancer…</h2>
+<p><img data-src="https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif" /></p>
+<p>Il faut cibler ses besoins à court et long terme</p>
+</section>
+<section id="quest-ce-quon-veut-accomplir" class="slide level2">
+<h2>1. Qu’est-ce qu’on veut accomplir ?</h2>
+<ul>
+<li>Prendre des notes personnelles, suivre ses projets?
+<ul>
+<li>*NB p/r à la confidentialité des données, devraient tjrs être anonymisées, etc.</li>
+</ul></li>
+<li>Faciliter la collaboration à plusieurs?</li>
+<li>Éviter d’envoyer mille courriels et recevoir pleins de courriels, etc. p/r à ses analyses.</li>
+<li>simplement montrer une analyse vite vite à quelqu’un et pouvoir l’updater..</li>
+<li>Bref, bien des raisons pour lesquelles une personne voudrait faire ca..</li>
+</ul>
+</section>
+<section id="est-ce-quon-veut-de-linteraction" class="slide level2" data-auto-animate="">
+<h2 data-auto-animate="">2. Est-ce qu’on veut de l’interaction?</h2>
+<iframe src="widgets/plotly.html" width="100%" height="550px" allowtransparency="true">
+</iframe>
+</section>
+<section id="est-ce-quon-veut-de-linteraction-1" class="slide level2" data-auto-animate="">
+<h2 data-auto-animate="">2. Est-ce qu’on veut de l’interaction?</h2>
+<pre ><code class="r" eval="F," message="FALSE," warning="F," data-line-numbers="1-2|6-8|17-19">library(plotly)
+library(gapminder)
+
+df &lt;- gapminder 
+fig &lt;- df %&gt;%
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    size = ~pop, 
+    color = ~continent, 
+    frame = ~year, 
+    text = ~country, 
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers'
+  )
+fig &lt;- fig %&gt;% layout(
+    xaxis = list(
+      type = "log"
+    )
+  )
+
+fig
+</code></pre>
+</section>
+<section id="est-ce-quon-veut-faciliter-le-téléchargement-de-données-rapide" class="slide level2">
+<h2>3. Est-ce qu’on veut faciliter le téléchargement de données rapide?</h2>
+</section>
+<section class="slide level2">
+
+<iframe src="widgets/DT.html" width="105%" height="650px" allowtransparency="false" style="max-width:108%">
+</iframe>
+</section>
+<section class="slide level2">
+
+<blockquote>
+<p>Selon les besoins, la <em>recette</em> va grandement varier.</p>
+</blockquote>
+<p><br> <br></p>
+<p>L’investissement en temps et en <del>frustration</del> défis ne sera pas le même pour un site ULTRA complet VS un fichier simplement exporter à partir de SPSS par exemple.</p>
+</section></section>
+<section>
+<section id="exemple-1" class="title-slide slide level1 blue" data-background-iframe="https://www.jamovi.org">
+<h1 class="blue" data-background-iframe="https://www.jamovi.org">Exemple #1</h1>
+
+</section>
+<section id="exemple-2" class="slide level2 blue" data-background-iframe="https://wittkuhn.mpib.berlin/highspeed/">
+<h2 class="blue" data-background-iframe="https://wittkuhn.mpib.berlin/highspeed/">Exemple #2</h2>
+</section></section>
+<section id="pour-aller-plus-loin" class="title-slide slide level1">
+<h1>Pour aller plus loin</h1>
+<ul>
+<li><a href="https://catalogue.edulib.org/fr/cours/UMontreal-ISDS/">Cours d’introduction à la science des données sociales avec R</a></li>
+<li>Licences</li>
+<li>Containers (Docker, Singularity)</li>
+<li>Datalad</li>
+<li>Et plus encore… 🤯</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-4.1/dist/reveal.js"></script>
+	<script src="index_files/reveal.js-4.1/plugin/notes/notes.js"></script>
+	<script src="index_files/reveal.js-4.1/plugin/search/search.js"></script>
+	<script src="index_files/reveal.js-4.1/plugin/zoom/zoom.js"></script>
+  <script src="index_files/reveal.js-4.1/plugin/chalkboard/plugin.js"></script>
+  <script src="index_files/reveal.js-4.1/plugin/menu/menu.js"></script>
+	<script src="index_files/reveal.js-4.1/plugin/highlight/highlight.js"></script>
+	<script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+				// Push each slide change to the browser history.  Implies `hash: true`
+				history: true,
+				// Vertical centering of slides
+				center: false,
+				// Optional reveal.js plugins
+				plugins: [ RevealNotes,
+                   RevealSearch,
+                   RevealZoom,
+                   RevealChalkboard,
+                   RevealMenu,
+                  
+                  
+                  
+                  
+									RevealHighlight,
+				          ],
+				menu: {
+					numbers: true,
+					custom: false,
+					themes: false,
+					transitions: true
+					},
+
+        	chalkboard: {
+          	toggleNotesButton: true,
+          	theme: 'chalkboard',
+					},
+					keyboard: {
+						67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+						66: function() { RevealChalkboard.toggleChalkboard() }, // toggle chalkboard when 'b' is pressed
+						46: function() { RevealChalkboard.clear() },    // clear chalkboard when 'DEL' is pressed
+						8: function() { RevealChalkboard.reset() },    // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+						68: function() { RevealChalkboard.download() }, // downlad recorded chalkboard drawing when 'd' is pressed
+					},
+});
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+
+  </body>
+</html>

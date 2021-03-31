@@ -1,0 +1,49 @@
+/* Code from PR#82 (Add two columns layout and more styles) */
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+.display .math{display: block; text-align: center; margin: 0.5rem auto;}
+/* end of PR #82 */
+
+
+/* Custom CSS classes for styling purpose */
+
+:root{
+  --blue-30: #d6effc;
+  --blue-40: #00a1cd;
+  --blue-50: #006bb6;
+  
+  --red-50: #d83a13;
+
+  --green-50: #36A31B;
+
+  --grey-10: #f8f8f8;
+  --grey-85: #181b1f;
+  --main-font: var(--grey-10);
+  --main-bg-color: var(--grey-85);
+  --background-color: var(--grey-85); 
+  --main-color: var(--grey-10);
+}
+
+.reveal .slide-background-content {
+  background-color: var(--background-color);
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  color: var(--grey-10);
+}
+
+.blue {
+  color: var(--blue-40) !important;
+}
+
+.white {
+  color: var(--grey-10);
+}
+
+.left p {
+  text-align: left;
+}
+

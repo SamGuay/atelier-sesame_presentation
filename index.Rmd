@@ -1,0 +1,208 @@
+---
+title: Partager ses analyses sur le Web
+author: Samuel Guay
+date: 2021-03-31
+output:
+  revealjs::revealjs_presentation:
+    template: assets/osum.html
+    pandoc_args:
+      - --lua-filter=assets/revealjs-codeblock.lua
+    highlight: null # null to enable highlight plugin
+    css: ["assets/custom.css", "assets/dracula.css"]
+    theme: night
+    self_contained: FALSE # enable plugin
+    
+    # List of plugins to include in the presentation
+    reveal_plugins: ["notes", "search", "zoom", "menu", "chalkboard"]
+    reveal_options:
+      # parallaxBackgroundImage:
+      history: true
+      chalkboard:
+        theme: chalkboard
+        toggleNotesButton: true
+      menu:
+        numbers: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = F, message = F)
+```
+
+# Partager ses analyses sur le Web {style="background-color: var(--background-color;); color: var(--blue-40); "}
+
+<span class="white">[Samuel Guay](https://samuelguay.ca)</span>
+
+![](img/cover.png){.stretch}
+
+## Open Science UMontréal {class="left"}
+
+<small>
+Open Science UMontréal est une initiative étudiante qui a pour [mission](https://docs.osumontreal.ca/fr/#mission)
+de promouvoir une science au service du bien commun par la **sensibilisation**,
+la mise à disposition de **ressources** et la **mobilisation de la communauté**.
+
+### Pour nous joindre
+Toute personne intéressée, qu’elle soit affiliée ou non à l’UdeM, peut
+participer aux activités et joindre notre initiative.
+
+Pour toute question, pour joindre un membre de notre équipe ou pour vous
+impliquez au sein d’Open Science Umontréal -> Contactez-nous via courriel
+info@osumontreal.ca et il nous fera plaisir de vous répondre :)
+</small>
+
+![Logo d'OSUMontréal](img/osum_white.png){.stretch style="background:none"}
+
+# Pertinence de partager?
+
+> - Pour **soi-même** (et ses collègues)
+      - Faciliter ++ les collaborations
+> - Pour les autres qui découvrent vos travaux
+> - Force à faire/automatiser un contrôle de qualité 
+> - Pour une meilleure reproductibilité et science en général
+
+## Exemples de partages
+
+1. Site
+
+## Avant de se lancer...
+
+![](https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif)
+
+Il faut cibler ses besoins à court et long terme
+
+## 1. Qu'est-ce qu'on veut accomplir ?
+
+   - Prendre des notes personnelles, suivre ses projets?
+     - \*NB p/r à la confidentialité des données, devraient tjrs être
+       anonymisées, etc.
+   - Faciliter la collaboration à plusieurs?
+   - Éviter d'envoyer mille courriels et recevoir pleins de courriels, etc. p/r
+     à ses analyses.
+   - simplement montrer une analyse vite vite à quelqu'un et pouvoir l'updater..
+   - Bref, bien des raisons pour lesquelles une personne voudrait faire ca..
+
+## 2. Est-ce qu'on veut de l'interaction? {data-auto-animate=""}
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, cache=TRUE, include=FALSE, out.height="475px", width="100%"}
+library(plotly)
+library(gapminder)
+
+df <- gapminder 
+fig <- df %>%
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    size = ~pop, 
+    color = ~continent, 
+    frame = ~year, 
+    text = ~country, 
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers'
+  )
+fig <- fig %>% layout(
+    xaxis = list(
+      type = "log"
+    )
+  )
+
+fig
+
+htmlwidgets::saveWidget(widget=fig, file="widgets/plotly.html", selfcontained=TRUE)
+
+```
+<iframe src="widgets/plotly.html" width=100% height=550px allowtransparency="true"> </iframe>
+
+## 2. Est-ce qu’on veut de l’interaction? {data-auto-animate=""}
+
+``` {.r eval=F, message=FALSE, warning=F, data-line-numbers="1-2|6-8|17-19"}
+library(plotly)
+library(gapminder)
+
+df <- gapminder 
+fig <- df %>%
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    size = ~pop, 
+    color = ~continent, 
+    frame = ~year, 
+    text = ~country, 
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers'
+  )
+fig <- fig %>% layout(
+    xaxis = list(
+      type = "log"
+    )
+  )
+
+fig
+
+```
+
+
+## 3. Est-ce qu'on veut faciliter le téléchargement de données rapide?
+
+```{r eval=FALSE, include=FALSE}
+library(DT) # Im using dev version on github and not the one on CRAN!! 
+
+a <- datatable(
+  df,
+  options = list(
+    dom = 'PBfrtip',
+    pageLength = 10,
+    lengthMenu = c(20,50,100),
+    selection = 'none',
+    buttons = list(c('copy', 'csv', 'excel', 'pdf', 'print'), list(extend = 'colvis', columns = c("2"))), #       Buttons ext (second list(extend) is for Invisibility
+    colReorder = TRUE, # ColReorder ext.
+    #deferRender = TRUE, # Scroller ext.
+    #scrollY = 200, # Scroller ext.
+    #scroller = TRUE, # Scroller ext.,
+    columnDefs = list(list(
+    searchPanes = list(show = FALSE)
+  ))),
+  extensions = c('Select', 'SearchPanes', 'Buttons', 'ColReorder'),
+  selection = 'none'
+) %>%
+    formatStyle(
+    'year',
+    backgroundColor = styleInterval(2000, c('normal', 'red'))
+  ) %>% formatStyle(
+    'pop',
+    backgroundColor = styleInterval(10000000, c('red', 'normal'))
+  ) %>% formatStyle(
+    'gdpPercap',
+    Color = styleInterval(500, c('blue', 'normal')),
+    fontWeight = 'bold'
+  )
+htmlwidgets::saveWidget(widget=a, file="widgets/DT.html", selfcontained=TRUE)
+```
+
+
+---
+
+<iframe src="widgets/DT.html" width=105% height=650px allowtransparency="false" style="max-width:108%"> </iframe>
+
+---
+
+> Selon les besoins, la _recette_ va grandement varier.
+
+<br>
+<br>
+
+L'investissement en temps et en ~~frustration~~ défis ne sera pas le même pour 
+un site ULTRA complet VS un fichier simplement exporter à partir de SPSS par exemple.
+
+# Exemple #1 {data-background-iframe="https://www.jamovi.org" .blue}
+
+## Exemple #2 {data-background-iframe="https://wittkuhn.mpib.berlin/highspeed/" .blue}
+
+# Pour aller plus loin
+
+* [Cours d'introduction à la science des données sociales avec R](https://catalogue.edulib.org/fr/cours/UMontreal-ISDS/)
+* Licences
+* Containers (Docker, Singularity)
+* Datalad
+* Et plus encore... 🤯
