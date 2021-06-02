@@ -8,7 +8,7 @@ output:
     pandoc_args:
       - --lua-filter=assets/revealjs-codeblock.lua
     highlight: null # null to enable highlight plugin
-    css: ["assets/custom.css", "assets/dracula.css"]
+    css: ["presentation/assets/custom.css", "presentation/assets/dracula.css"]
     theme: night
     self_contained: FALSE # enable plugin
     
@@ -60,10 +60,6 @@ info@osumontreal.ca et il nous fera plaisir de vous répondre :)
 > - Force à faire/automatiser un contrôle de qualité 
 > - Pour une meilleure reproductibilité et science en général
 
-## Exemples de partages
-
-1. Site
-
 ## Avant de se lancer...
 
 ![](https://media.giphy.com/media/l0HlRnAWXxn0MhKLK/giphy.gif)
@@ -73,13 +69,12 @@ Il faut cibler ses besoins à court et long terme
 ## 1. Qu'est-ce qu'on veut accomplir ?
 
    - Prendre des notes personnelles, suivre ses projets?
-     - \*NB p/r à la confidentialité des données, devraient tjrs être
+     - *N.B.:* Attention à la confidentialité des données, elles devraient toujours être
        anonymisées, etc.
    - Faciliter la collaboration à plusieurs?
-   - Éviter d'envoyer mille courriels et recevoir pleins de courriels, etc. p/r
-     à ses analyses.
-   - simplement montrer une analyse vite vite à quelqu'un et pouvoir l'updater..
-   - Bref, bien des raisons pour lesquelles une personne voudrait faire ca..
+   - Éviter l'échange de centaines de courriels en lien avec ses analyses;
+   - Montrer une analyse vite vite à quelqu'un et pouvoir la mettre à jour 
+   - Bref, beaucoup de raisons pour lesquelles une personne voudrait diffuser ses analyses en ligne.
 
 ## 2. Est-ce qu'on veut de l'interaction? {data-auto-animate=""}
 
